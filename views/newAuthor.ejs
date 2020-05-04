@@ -1,0 +1,79 @@
+<%- include ('templates/header'); -%>
+
+<div class='container'>
+	<div class='jumbotron'>
+		<h3> INSPIRATIONAL QUOTES </h3>
+		<a class='btn btn-primary' href='/home'>Home</a>
+	</div>
+	<h3>Add New Author</h3>
+	<form action='/author/new' method='POST'>
+		<div class='form-group row'>
+			<label for='firstname' class='col-sm-4 col-form-label'>First Name</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='firstname' name='firstname' placeholder='Jane' required>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='lastname' class='col-sm-4 col-form-label'>Last Name</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='lastname' name='lastname' placeholder='Doe' required>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='dob' class='col-sm-4 col-form-label'>Date of Birth</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='dob' name='dob' placeholder='YYYY-MM-DD' required>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='dod' class='col-sm-4 col-form-label'>Date of Dead</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='dod' name='dod' placeholder='YYYY-MM-DD'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='profession' class='col-sm-4 col-form-label'>Profession</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='profession' name='profession' placeholder='Profession'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='sex' class='col-sm-4 col-form-label'>Sex</label>
+			<div class='col-sm-4'>
+				<div class='form-check form-check-inline'>
+                    <input class='form-check-input' type='radio' name='sex' id='male' value='M'>
+                    <label class='form-check-label' for='male'>Male</label>
+                </div>
+                <div class='form-check form-check-inline'>
+                    <input class='form-check-input' type='radio' name='sex' id='female' value='F'>
+                    <label class='form-check-label' for='female'>Female</label>
+                </div>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='country' class='col-sm-4 col-form-label'>Country</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='country' name='country' placeholder='country'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='portrait' class='col-sm-4 col-form-label'>Portrait</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='portrait' name='portrait' placeholder='Image URL'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='biography' class='col-sm-4 col-form-label'>Biography</label>
+			<div class='col-sm-4'>
+				<textarea class='form-control' rows='5' id='biography' name='biography'></textarea>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<div class='col-sm-4'></div>
+			<div class='col-sm-4'>
+				<button class='btn btn-primary btn-block'>Add Author</button>
+			</div>
+			<div class='col-sm-4'></div>
+		</div>
+	</form>
+</div>

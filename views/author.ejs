@@ -1,0 +1,27 @@
+<%- include ('templates/header'); -%>
+
+<div class='container'>
+    <div class='jumbotron'>
+        <h3> INSPIRATIONAL QUOTES </h3>
+        <a class='btn btn-primary' href='/home'>Home</a>
+    </div>
+    <div class='row'>
+        <%if(!author){%>
+            <h1 class='col-sm-12 nofound'>CANNOT FIND YOUR AUTHOR!!!</h1>    
+        <%}
+        else{%>
+            <img class='col-sm-4 portrait' src=<%=author.portrait%> />
+            <div class='col-sm-4 info'>
+              <h3><%=author.firstName%> <%=author.lastName%></h3>
+              <div>Born: <%=author.dob%></div>
+              <div>Dead: <%=author.dod%></div>
+              <div>Sex: <%=author.sex%></div>
+              <div>Profession: <%=author.profession%></div>
+              <div>Country: <%=author.country%></div>
+              <div class='bio'><%=author.biography%></div>
+            </div>
+        <%}%>
+    </div>
+</div>
+
+<%- include ('templates/footer'); -%>

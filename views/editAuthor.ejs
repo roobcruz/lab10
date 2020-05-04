@@ -1,0 +1,87 @@
+<%- include ('templates/header'); -%>
+
+<div class='container'>
+	<div class='jumbotron'>
+		<h3> INSPIRATIONAL QUOTES </h3>
+		<a class='btn btn-primary' href='/home'>Home</a>
+	</div>
+	<h3>Edit An Author</h3>
+	<form action='/author/<%=author.authorId%>?_method=PUT' method='POST'>
+	    <div class='form-group row'>
+			<label for='authorId' class='col-sm-4 col-form-label'>Author Id</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='authorId' name='authorId' value='<%=author.authorId%>' disabled>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='firstname' class='col-sm-4 col-form-label'>First Name</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='firstname' name='firstname' value='<%=author.firstName%>' required>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='lastname' class='col-sm-4 col-form-label'>Last Name</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='lastname' name='lastname' value='<%=author.lastName%>' required>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='dob' class='col-sm-4 col-form-label'>Date of Birth</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='dob' name='dob' value='<%=author.dob%>' required>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='dod' class='col-sm-4 col-form-label'>Date of Dead</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='dod' name='dod' value='<%=author.dod%>'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='profession' class='col-sm-4 col-form-label'>Profession</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='profession' name='profession' value='<%=author.profession%>'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='sex' class='col-sm-4 col-form-label'>Sex</label>
+			<div class='col-sm-4'>
+				<div class='form-check form-check-inline'>
+                    <input class='form-check-input' type='radio' name='sex' id='male' value='M'>
+                    <label class='form-check-label' for='male'>Male</label>
+                </div>
+                <div class='form-check form-check-inline'>
+                    <input class='form-check-input' type='radio' name='sex' id='female' value='F'>
+                    <label class='form-check-label' for='female'>Female</label>
+                </div>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='country' class='col-sm-4 col-form-label'>Country</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='country' name='country' value='<%=author.country%>'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='portrait' class='col-sm-4 col-form-label'>Portrait</label>
+			<div class='col-sm-4'>
+				<input type='text' class='form-control' id='portrait' name='portrait' value='<%=author.portrait%>'>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label for='biography' class='col-sm-4 col-form-label'>Biography</label>
+			<div class='col-sm-4'>
+				<textarea class='form-control' rows='10' id='biography' name='biography'><%=author.biography%></textarea>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<div class='col-sm-4'>
+			    <a class='btn btn-danger btn-block' href='/author/<%=author.authorId%>'>Cancel</a>
+			</div>
+			<div class='col-sm-4'>
+				<button class='btn btn-primary btn-block'>Update Author</button>
+			</div>
+			<div class='col-sm-4'></div>
+		</div>
+	</form>
+</div>
